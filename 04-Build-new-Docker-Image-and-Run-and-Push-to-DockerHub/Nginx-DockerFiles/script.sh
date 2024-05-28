@@ -1,6 +1,7 @@
 ## Step-3: Build Docker Image & run it
 docker build -t kirstyannepollock/mynginx_image1:v1 .
 docker run --name mynginx1 -p 80:80 -d kirstyannepollock/mynginx_image1:v1
+docker ps
 
 ## Step-4: Tag & push the Docker image to docker hub
 
@@ -10,4 +11,8 @@ docker push kirstyannepollock/mynginx_image1:v1-release
 
 ## Step-5: Verify the same on docker hub
 # - Login to docker hub and verify the image we have pushed
-# - Url: https://hub.docker.com/repositories
+# - Url
+# docker login
+# curl https://hub.docker.com/repository/docker/kirstyannepollock/mynginx_image1/general
+
+curl http://localhost:80
